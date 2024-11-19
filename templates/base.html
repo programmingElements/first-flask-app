@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} First App {% endblock %}</title>
+</head>
+<body>
+  <nav style="background-color:red; color: white; display: flex; justify-content: space-between; padding: 0px 10px;">
+    <h3 style="font-size: 24px;"><a href="{{ url_for('index') }}">PE</a></h3>
+    <ul type="none" style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; font-size: 16px;">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">AboutUs</a></li>
+      <li><a href="{{ url_for('contact') }}">ContactUs</a></li>
+    </ul>
+  </nav>
+  <h1>Welcome to Programming Elements Channel!</h1>
+   {% block content %}
+
+   {% endblock %}
+
+</body>
+</html>

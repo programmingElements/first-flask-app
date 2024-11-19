@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+   About Us
+{% endblock %}
+
+{% block content %}
+  <h1>Hello! AboutUs Page</h1>
+  <h3>Hi! I am Jallu Chakravarthi</h3>
+  <h4>I am native of Srikakulam</h4>
+  <h4>I am Software Engineer at HCL Technologies</h4>
+  <h4>Status is {{ status | repeat(6) | alter_case }}</h4>
+{% endblock %}

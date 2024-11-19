@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+   Index
+{% endblock %}
+
+{% block content %}
+  <h1>Hello! {{technology_name}} {{app_name}}</h1>
+  <h2><u>Flask Topics</u></h2>
+  {% for topic in topics %}
+     <h3 style="color: blue">{{topic | capitalize}}</h3>
+  {% endfor %}
+
+  <h2><u>{{feature_flask | reverse_word}}</u></h2>
+  {% for feature in features %}
+     <h3 style="color: rgb(18, 205, 9)">{{feature | capitalize}}</h3>
+  {% endfor %}
+
+  <h2 style="color: cadetblue;">Software Technologies</h2>
+  {%- for column in items|slice(3) %}
+  <!-- <h2>{{column}}</h2> -->
+  <ul class="column-{{ loop.index }}">
+  {%- for item in column %}
+    <li>{{ item }}</li>
+  {%- endfor %}
+  </ul>
+  {%- endfor %}
+
+{% endblock %}
