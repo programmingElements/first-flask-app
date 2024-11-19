@@ -98,10 +98,6 @@ if __name__=="__main__":
 
       COPY . .
 
-      RUN flask db init
-      RUN flask db migrate
-      RUN flask db upgrade
-
       EXPOSE 5050
 
       CMD ["python3", "run.py"]
